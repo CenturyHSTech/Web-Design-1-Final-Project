@@ -38,10 +38,13 @@ required_elements = [("doctype", 1),
                      ("footer", 1)]
 
 min_required_elements = [
-    ("figure", 9),
-    ("img", 9),
-    ("a", 9),
-    ("figcaption", 9)]
+    ("nav", 4),
+    ("ul", 4),
+    ("li", 16),
+    ("figure", 6),
+    ("img", 6),
+    ("a", 16),
+    ("figcaption", 6)]
 
 exact_number_of_elements = html.get_number_of_elements_per_file(
     project_dir, required_elements
@@ -60,6 +63,10 @@ def html_files():
 
 def test_has_index_file(html_files):
     assert "project/index.html" in html_files
+
+
+def test_min_num_files(html_files):
+    assert len(html_files) >= 4
 
 
 @pytest.mark.parametrize("file,element,num", exact_number_of_elements)
@@ -91,7 +98,7 @@ def test_number_of_image_files_for_proficient():
     image_files += clerk.get_all_files_of_type(project_dir, "png")
     image_files += clerk.get_all_files_of_type(project_dir, "gif")
     image_files += clerk.get_all_files_of_type(project_dir, "webp")
-    assert len(image_files) >= 18
+    assert len(image_files) >= 6
 
 
 @pytest.mark.parametrize("expected, result", hotlink_report)

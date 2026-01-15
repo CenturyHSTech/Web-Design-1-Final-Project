@@ -8,10 +8,12 @@ from webcode_tk import html_tools as html
 project_dir = "project/"
 
 min_required_elements = [
-    ("figure", 12),
-    ("img", 12),
-    ("a", 12),
-    ("figcaption", 12)]
+    ("ul", 6),
+    ("li", 20),
+    ("figure", 10),
+    ("img", 10),
+    ("a", 20),
+    ("figcaption", 10)]
 
 min_number_of_elements = html.get_number_of_elements_per_file(
     project_dir, min_required_elements
@@ -45,4 +47,4 @@ def test_for_html_exceeds_number_of_image_files():
     image_files += clerk.get_all_files_of_type(project_dir, "png")
     image_files += clerk.get_all_files_of_type(project_dir, "gif")
     image_files += clerk.get_all_files_of_type(project_dir, "webp")
-    assert len(image_files) >= 24
+    assert len(image_files) >= 10
