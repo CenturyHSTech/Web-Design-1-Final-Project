@@ -30,11 +30,11 @@ Students should be able to:
 7. Commit and push your changes at least once or twice during each work session.
 8. Check the tests on GitHub.
 
-## Getting any errors?
-### Validation Errors: 
+### Getting any errors?
+#### Validation Errors: 
 If you get any validation errors, try checking your code using the [HTML Validator](https://validator.w3.org/nu/#textarea) for HTML errors or the [CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_upload).
 
-### Color Contrast Errors:
+#### Color Contrast Errors:
 If you are getting any color contrast errors, there are a few things to check:
 * ***Did you only set the `color` or `background-color` and not the other?*** Any time you set a color or background color, be sure to add both in the same declaration block.
 * Check both color and background color using the [WebAIM Contrast Checker](https://webaim.org/resources/contrastchecker/)
