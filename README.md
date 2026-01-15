@@ -45,6 +45,7 @@ If you are getting any color contrast errors, there are a few things to check:
 
 <details>
 <summary><strong>Project Requirements</strong></summary>
+
 ### Content
 You may either...
 - Choose one of the following options from the [https://github.com/CenturyHSTech/Website-Project-Content-Repository](https://github.com/CenturyHSTech/Website-Project-Content-Repository):
