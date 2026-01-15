@@ -41,6 +41,7 @@ min_required_elements = [
     ("nav", 4),
     ("ul", 4),
     ("li", 16),
+    ("section or article or div", 8),
     ("figure", 6),
     ("img", 6),
     ("a", 16),

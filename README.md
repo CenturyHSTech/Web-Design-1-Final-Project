@@ -8,9 +8,12 @@ This project involves designing and coding an image gallery that displays a mini
 <details>
 <summary><strong>Project Overview</strong></summary>
 
-Students will design an image gallery project that showcases a minimum of 9 image thumbnails related to a theme, and these thumbnails link to a full-sized image.
+Students will represent multi-page websites as separate files with shared content across pages, using appropriate file naming, directory structure, and version control.
 
-The design should be a grid of images styled using fonts, colors, borders, and other CSS properties.
+Students should be able to:
+* employ HTML code to mark up text and create a multi-file web site.
+* Use HTML and CSS to create a navbar that links multiple files together.
+* Re-use and modify existing code to design a layout for the page
 
 </details>
 
@@ -18,23 +21,23 @@ The design should be a grid of images styled using fonts, colors, borders, and o
 <details>
 <summary><strong>Setup Instructions</strong></summary>
 
-1. Place all project files (HTML, CSS, images) into the `simple_html_page` folder.
-2. Clone the project: `git clone`
-3. Open in VS Code (`Image-Gallery-Project.code-workspace`)
-4. Open the terminal (View > New Terminal)
-5. Install the Python extension for VS Code
-6. Run `poetry shell` in the terminal
-7. Note your virtual environment name
-8. Open the Command Palette (`Ctrl + Shift + P`)
-9. Select the Python interpreter (look for the Poetry environment)
-10. Run `poetry update`
-11. Run `pytest` to test your code
-12. If needed, configure tests via the Testing icon
-13. Place your content in the `image_gallery` folder
-14. Store all images (full-size and thumbnails)
-15. Choose a theme for your gallery
-16. Record your final product showing responsiveness
-17. Commit and push changes regularly
+1. Clone this project by clicking the green `Code` button and choosing Open with GitHub Desktop.
+2. Choose the "for my own purposes" option (the 2nd choice).
+3. Open this project in VS Code.
+4. Put all project files in the `project` folder.
+5. Create a folder for your images and name it `images` (this is where you put your images).
+6. Review the requirements below and any other instructions your teacher provides (in Google Classroom).
+7. Commit and push your changes at least once or twice during each work session.
+8. Check the tests on GitHub.
+
+## Getting any errors?
+### Validation Errors: 
+If you get any validation errors, try checking your code using the [HTML Validator](https://validator.w3.org/nu/#textarea) for HTML errors or the [CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_upload).
+
+### Color Contrast Errors:
+If you are getting any color contrast errors, there are a few things to check:
+* ***Did you only set the `color` or `background-color` and not the other?*** Any time you set a color or background color, be sure to add both in the same declaration block.
+* Check both color and background color using the [WebAIM Contrast Checker](https://webaim.org/resources/contrastchecker/)
 
 </details>
 
@@ -42,31 +45,47 @@ The design should be a grid of images styled using fonts, colors, borders, and o
 
 <details>
 <summary><strong>Project Requirements</strong></summary>
+### Content
+You may either...
+- Choose one of the following options from the [https://github.com/CenturyHSTech/Website-Project-Content-Repository](https://github.com/CenturyHSTech/Website-Project-Content-Repository):
+  + Pixel Playground
+  + Regional Chinese Food
+  + Skyhaven Roofing Company
+  + Ultimate Steak Cooking Guide
+NOTE: you might have to just download a zip version of the file.
+
+OR just choose your own topic 
 
 ### Folder and File Structure
-- Create a single web page named `index.html`
-- Create a folder titled `images` (all lowercase)
-- Include at least 18 images:
-  - 9 full-sized images
-  - 9 thumbnails (max width: 450px)
+- Create a home page and name it `index.html`
+- Create 3 or 4 other pages using the same HTML structure and styles as the home page
+- Create a folder titled `images` (all lowercase) for any image you use
+- Include at least 6 images
+- Create one or more external stylesheets for your styles, but do not use the style tag unless you want one specific change to a given page
+
+***IMPORTANT*** all shared styles (which should be almost if not all of your styles) must be in one or more external stylesheets and linked in the `head` element of all `html` docs
 
 ### HTML Requirements
-- A single HTML file with:
+- Four or more HTML files with:
   - All standard HTML5 tags (`DOCTYPE`, `html`, `head`, `title`, `body`)
-  - A `header` with a `h1` title
-  - A `main` section containing at least 9 `figure` elements
-  - Each `figure` includes:
-    - A thumbnail image with `alt` text
-    - A link to the full-sized image
-    - A `figcaption` with a `cite` tag for image credit (linked if not self-taken)
+  - A `nav` element with an `ul` that contains one `li` for each page in the navbar.
+    + each `li` must contain an `a` that links (relative link) to each `html` doc.
+  - A `header` with a `h1` title (you may wish to put the `h1` in an `hgroup` inside that `header`)
+  - A `main` section to contain the primary content for each page.
+  - Each page should include 2-3 or more **containing elements** (`section`, `article` or `div` tags -- I'll let you chose)
+    + Include a minimum of 8 such containers in all.
+    + Each should include a section header using the `h2` tag and other HTML content, such as lists, paragraphs, links, tables.
+  - Each page should also include one or more `figure` elements that contain an image and a `figcaption` to caption the image.
 
 ### CSS Requirements
-- Use at least one stylesheet or a `<style>` tag
+- Use at least one external stylesheet that all pages link to.
+- All pages should be consistent one from another, unless it's a relatively minor change, such as a different background image on the banner
+    - **NOTE**: only use the `style` tag for a minor override. Most styles belong in the external stylesheet.
 - Font pairing
 - Background and text colors with proper contrast:
   - AAA rating for body text
   - AA rating acceptable for headings
-- Use `flex` layout for the container
+- Use `flex` or `grid` layout for the `ul` in the `nav` and the content in the `main` element.
 - Style `figure` elements with `margin`, `border`, `padding`, and `background-color`
 
 ### Design Requirements
